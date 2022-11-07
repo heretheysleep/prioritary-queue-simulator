@@ -1,8 +1,8 @@
-public abstract class Queue {
-    protected int length;
-    protected Client[] clients;
-    protected int numberOfClients;
-    protected int nextClientIndex;
+public class Queue {
+    private int length;
+    private Client[] clients;
+    private int numberOfClients;
+    private int nextClientIndex;
 
     public Queue(int length) {
         this.length = length;
@@ -45,5 +45,9 @@ public abstract class Queue {
         numberOfClients--;
 
         return element;
+    }
+
+    public int getNumberOfClients() {
+        return numberOfClients;
     }
 }
